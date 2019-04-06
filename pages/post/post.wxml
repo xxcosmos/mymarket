@@ -1,0 +1,16 @@
+<form bindsubmit='submit'>
+  <label>标题：</label>
+  <input type="text" name="title"></input>
+  <label>描述</label>
+  <input placeholder='请输入描述' name="content"></input>
+  <label>价格：</label>
+  <input name="price" type="number"></input>
+  <button bindtap='chooseImg'>选择照片</button>
+  <button form-type='submit'>提交</button>
+
+</form>
+
+<label>可以预览照片，但是上传不了，因为接口还没写。。。</label>
+<view wx:if="{{tempFilePaths}}!=null">
+<image src='{{tempFilePaths[0]}}'></image>
+</view>

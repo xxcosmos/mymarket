@@ -1,0 +1,25 @@
+<view class="swiper-container">
+
+  <block>
+    <swiper autoplay="true" indicator-dots="true" interval="5000" duration="500" circular="true" class="swiper">
+      <block wx:for="{{goodList}}" wx:key="index">
+        <swiper-item class="swiper-item">
+          <view data-id="{{item.good.id}}" class="good-container bg-white" hover-class="good-container-hover" catchtap="goDetail">
+            <view class="good-image">
+              <image src="{{item.good.mainImage}}" mode="scaleToFill" />
+            </view>
+            <view class="good-info">
+              <text class="good-name">{{item.good.title}}</text>
+              <text class="author">描述：{{item.good.content}}</text>
+              <text class="author">发布者：{{item.user.nickname}}</text>
+              <image src='{{item.user.avatarUrl}}' ></image>
+              <text class="author">¥{{item.good.price}}</text>
+              <text class="author">viewCount:{{item.good.viewCount}}</text>
+              <text class="author">createTime:{{item.good.createTime}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </block>
+</view>

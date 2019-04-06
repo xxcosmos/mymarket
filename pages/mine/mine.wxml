@@ -1,0 +1,32 @@
+<view>
+<text>从服务器获取用户信息测试</text>
+</view>
+<button
+  wx:if="{{canIUse}}"
+  open-type="getUserInfo"
+  bindgetuserinfo="bindGetUserInfo">
+    授权登录
+</button>
+<view>
+<image src="{{user.avatarUrl}}"></image>
+</view>
+
+<view>
+<text>nickname:{{user.nickname}}</text>
+</view>
+
+<view>
+<text>city:{{user.city}}</text>
+</view>
+
+<view>
+<text>createTime:{{user.createTime}}</text>
+</view>
+
+<view>
+<text>gender:{{user.sex}}</text>
+</view>
+
+<view>
+<text>province:{{user.province}}</text>
+</view>

@@ -1,0 +1,18 @@
+{
+  "usingComponents": {},
+
+
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "武科圈",
+  "navigationStyle": "default",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light",
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "pageOrientation": "portrait",
+  "disableSwipeBack": false,
+  "disableScroll": true
+}

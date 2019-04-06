@@ -1,0 +1,17 @@
+{
+  "usingComponents": {},
+
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的",
+  "navigationStyle": "default",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light",
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "pageOrientation": "portrait",
+  "disableSwipeBack": false,
+  "disableScroll": true
+}

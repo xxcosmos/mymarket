@@ -1,0 +1,61 @@
+<!--pages/detail/detail.wxml-->
+<view>
+
+  <view class="good-container bg-white">
+
+    <view class="good-info">
+      <image class="good-image" mode="scaleToFill" src="{{goodInfo.good.mainImage}}"></image>
+
+      <view class="good-desc">
+        <text class="good-main-text">{{goodInfo.good.title}}</text>
+        <text class="good-text">{{goodInfo.good.content}}</text>
+        <text class="good-text">发布者昵称{{goodInfo.user.nickname}}</text>
+        <image class='good-image' src='{{goodInfo.user.avatarUrl}}'></image>
+        <text class="good-text">¥ {{goodInfo.good.price}}</text>
+        <text class="good-text">浏览次数：{{goodInfo.good.viewCount}}次</text>
+        <text class="good-text">createTime:{{goodInfo.good.createTime}}</text>
+        <text class="good-text">updateTime:{{goodInfo.good.updateTime}}</text>
+
+
+      </view>
+    </view>
+
+
+
+    <view class="comment-container">
+      <view class="comment-title">
+        <text>--------- 评论 ---------</text>
+      </view>
+    </view>
+
+
+    <view class="comment-area" >
+
+      <block wx:if="{{commentList.length > 0}}">
+        <view class="comment-item" wx:for="{{commentList}}" wx:key="index">
+          <view class="avatar-container">
+            <image mode="scaleToFill" src="{{item.uavatar}}" class="user-avatar"></image>
+          </view>
+
+          <view class="comment-content">
+            <text class="user-name">{{item.uname}}</text>
+            <text class="user-comment">{{item.ccontent}}</text>
+            <text class="comment-time">{{item.ctime}}</text>
+          </view>
+        </view>
+      </block>
+
+      <block wx:else>
+        <view class="comment-placeholder">来当第一个评论的人吧～</view>
+      </block>
+
+
+    </view>
+  </view>
+
+
+  <!-- bottom button -->
+  <view class="fixed-bottom block-full-width flex-container bg-white">
+    <button class="full-button" type="primary" catchtap="goComment" data-id="{{goodInfo.good.id}}" > 写评论 </button>
+  </view>
+</view>
