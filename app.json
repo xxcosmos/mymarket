@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/query/query",
     "pages/index/index",
     "pages/mine/mine",
     "pages/post/post",
@@ -7,11 +8,12 @@
     "pages/bbs/bbs",
     "pages/good/good",
     "pages/login/login"
+   
   ],
   "window": {
     "navigationBarBackgroundColor": "##f4b342",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "in武科",
+    "navigationBarTitleText": "in",
     "navigationStyle": "default",
     "backgroundColor": "#f4b342",
     "backgroundTextStyle": "dark",
@@ -29,7 +31,7 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/query/query",
         "iconPath": "images/icon/index_unselected.png",
         "selectedIconPath": "images/icon/index_selected.png",
         "text": "首页"

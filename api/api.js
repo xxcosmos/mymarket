@@ -3,4 +3,6 @@ const baseURL = 'https://xiaoyuu.ngrok.xiaomiqiu.cn/';
 module.exports = {
     user: baseURL + 'user',
     good: baseURL + 'good',
+  queryStudentId: baseURL + 'student/info/name',
+  queryStudentName: baseURL + 'student/info/id'
 };

@@ -5,7 +5,7 @@ App({
 
   onLaunch: function() {
     let that = this;
-    that.checkLoginStatus();
+   // that.checkLoginStatus();
   },
 
   checkLoginStatus: function() {

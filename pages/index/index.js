@@ -46,7 +46,7 @@ Page({
 
   onLoad: function(res) {
     let that = this;
-    that.getGoodList();
+   // that.getGoodList();
   },
 
 
@@ -54,7 +54,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getGoodList();
+    //this.getGoodList();
   },
 
   onShareAppMessage: function(res) {

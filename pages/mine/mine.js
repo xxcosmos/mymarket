@@ -10,18 +10,18 @@ Page({
     user: null,
   },
   bindGetUserInfo: function() {
-    app.doLogin();
-    this.setData({
-      user: app.globalData.user,
-    })
+   // app.doLogin();
+    // this.setData({
+    //   user: app.globalData.user,
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.setData({
-      user: app.globalData.user,
-    })
+    // this.setData({
+    //   user: app.globalData.user,
+    // })
     console.log(this.data.user);
   },
 

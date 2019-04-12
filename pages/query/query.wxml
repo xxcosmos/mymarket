@@ -1,0 +1,28 @@
+<view class='page'>
+<view class='page_hd'>
+<view class='page_title'>武科大查询学号</view>
+<view class='page_bd page_bd_spacing'>
+<form class='weui-form-preview' bindsubmit='queryId'>
+<input class='weui-input' name='name' placeholder='请输入想要查询的姓名'>
+</input>
+<button class='weui-btn' form-type='submit'>查询学号</button>
+</form>
+
+</view>
+<view class='page_title'>武科大查询姓名</view>
+<view class='page_bd page_bd_spacing'>
+<form class='weui-form-preview' bindsubmit='queryName'>
+<input class='weui-input' name='id' placeholder='请输入想要查询的学号' type='number'>
+</input>
+<button class='weui-btn' form-type='submit'>查询姓名</button>
+</form>
+<view class='page_hd' wx:if='{{studentId!=null}}'>
+<view class='page_desc' wx:if='{{studentId!=null}}'>{{studentId}}</view>
+<view class='page_desc' wx:if='{{studentName!=null}}'>{{studentName}}</view>
+<view class='page_desc' wx:if='{{majorName!=null}}'>{{majorName}}</view>
+<view class='page_desc' wx:if='{{collegeName!=null}}'>{{collegeName}}</view>
+</view>
+
+</view>
+</view>
+</view>

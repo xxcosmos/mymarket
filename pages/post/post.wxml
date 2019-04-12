@@ -1,4 +1,4 @@
-<form bindsubmit='submit'>
+<!-- <form bindsubmit='submit'>
   <label>标题：</label>
   <input type="text" name="title"></input>
   <label>描述</label>
@@ -13,4 +13,6 @@
 <label>可以预览照片，但是上传不了，因为接口还没写。。。</label>
 <view wx:if="{{tempFilePaths}}!=null">
 <image src='{{tempFilePaths[0]}}'></image>
-</view>
+</view> -->
+
+不开发了

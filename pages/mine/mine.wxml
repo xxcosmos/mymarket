@@ -1,4 +1,4 @@
-<view>
+<!-- <view>
 <text>从服务器获取用户信息测试</text>
 </view>
 <button wx:if="{{user.nickname}}==null" open-type="getUserInfo"
@@ -27,4 +27,5 @@
 
 <view>
 <text>province:{{user.province}}</text>
-</view>
+</view> -->
+罢工
