@@ -1,0 +1,18 @@
+<!--pages/wifi/wifi.wxml-->
+<button bindtap='getWifi'>连接Wi-Fi</button>
+
+<view wx:for="{{wifiList}}">
+  <button wx:if="{{item.SSID!=null&&item.SSID!=''}}" bindtap='connect' data-id='{{index}}'>
+    {{index}} : {{item.SSID}}
+  </button>
+</view>
+<view wx:if="{{selectedWifi!=null}}">
+  <view>SSID:{{selectedWifi.SSID}}</view>
+  <view>BSSID:{{selectedWifi.BSSID}}</view>
+</view>
+<view wx:if="{{errMsg!=null}}">
+  <view>{{errMsg}}</view>,
+</view>
+<view wx:if="{{response!=null}}">
+  <view>response:{{response}}</view>
+</view>

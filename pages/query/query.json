@@ -12,5 +12,5 @@
   "onReachBottomDistance": 50,
   "pageOrientation": "portrait",
   "disableSwipeBack": false,
-  "disableScroll": true
+  "disableScroll": false
 }

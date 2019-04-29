@@ -9,7 +9,8 @@ Page({
     studentId: null,
     studentName: null,
     majorName:null,
-    collegeName: null
+    collegeName: null,
+    url: null
   },
 
   /**
@@ -27,7 +28,53 @@ Page({
   onReady: function() {
 
   },
+  queryPic: function(res){
+    this.clearData()
+    var that = this
+    var id = res.detail.value.id
+    var name = res.detail.value.name
+    console.log(id)
+    console.log(name)
+    if(id==''|| name == ''){
+      wx.showToast({
+        title: '请检查输入',
+        icon: 'none',
+      })
+      return
+    }
+    wx.request({
+      url: api.queryStudentPic,
+      method: 'POST',
+      data: {
+        studentName: name,
+        studentId: id
+      },
+      success:(res)=>{
+        if(res.data.code==200){
+          that.setData({
+            studentId: res.data.data.studentInfo.studentId,
+            studentName: res.data.data.studentInfo.studentName,
+            majorName: res.data.data.majorInfo.majorName,
+            collegeName: res.data.data.collegeInfo.collegeName,
+            url: res.data.data.url
+          })
+        }else{
+          wx.showToast({
+            title: res.data.message,
+            icon: 'none'
+          })
+        }
+      },
+      fail:(res)=>{
+        wx.showToast({
+          title: '请求错误',
+          icon: 'none'
+        })
+      }
+    })
+  },
   queryId: function(res) {
+    this.clearData()
     var name = res.detail.value.name
     let that = this
     console.log(name)
@@ -47,9 +94,12 @@ Page({
               majorName: res.data.data.majorInfo.majorName,
               collegeName: res.data.data.collegeInfo.collegeName,
             })
+            wx.showToast({
+              title: '查询成功',
+            })
           } else {
             wx.showToast({
-              title: '查询不到该姓名对应的学号TAT',
+              title: res.data.message,
               icon: 'none'
             })
           }
@@ -57,7 +107,7 @@ Page({
         },
         fail: (res) => {
           wx.showToast({
-            title: '查询不到该姓名对应的学号TAT',
+            title: '请求错误',
             icon: 'none'
           })
         }
@@ -65,7 +115,17 @@ Page({
     }
     
   },
+  clearData: function(){
+    this.setData({
+      studentId: null,
+      studentName: null,
+      majorName: null,
+      collegeName: null,
+      url: null
+    })
+  },
   queryName: function(res) {
+    this.clearData()
     var id = res.detail.value.id
     let that = this
     console.log(id)
@@ -79,15 +139,19 @@ Page({
         url: api.queryStudentName + '/' + id,
         success: (res) => {
           if (res.data.code == 200) {
+            console.log(res.data.data)
             that.setData({
-                studentName: res.data.data.studentName
-              }),
+              studentId: res.data.data.studentInfo.studentId,
+              studentName: res.data.data.studentInfo.studentName,
+              majorName: res.data.data.majorInfo.majorName,
+              collegeName: res.data.data.collegeInfo.collegeName,
+            }),
               wx.showToast({
                 title: '查询成功',
               })
           } else {
             wx.showToast({
-              title: '查询不到该学号对应的姓名TAT',
+              title: res.data.message,
               icon: 'none'
             })
           }
@@ -95,7 +159,7 @@ Page({
         },
         fail: (res) => {
           wx.showToast({
-            title: '查询不到该学号对应的姓名TAT',
+            title: '请求错误',
             icon: 'none'
           })
         }

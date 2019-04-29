@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/wifi/wifi",
     "pages/query/query",
     "pages/index/index",
     "pages/mine/mine",
@@ -7,8 +8,8 @@
     "pages/message/message",
     "pages/bbs/bbs",
     "pages/good/good",
-    "pages/login/login"
-   
+    "pages/login/login",
+    "pages/course-index/course-index"
   ],
   "window": {
     "navigationBarBackgroundColor": "##f4b342",

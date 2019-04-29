@@ -4,5 +4,6 @@ module.exports = {
     user: baseURL + 'user',
     good: baseURL + 'good',
   queryStudentId: baseURL + 'student/info/name',
-  queryStudentName: baseURL + 'student/info/id'
+  queryStudentName: baseURL + 'student/info/id',
+  queryStudentPic: baseURL+'student/pic/query'
 };
